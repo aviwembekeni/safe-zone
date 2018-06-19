@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
-    <script src="node_modules/canvasjs/dist/canvasjs.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
     #view-source {
@@ -45,6 +44,49 @@
       z-index: 900;
     }
     </style>
+
+    <script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("graphDisplay", {
+	exportEnabled: true,
+	animationEnabled: true,
+	title:{
+		text: "State Operating Funds"
+	},
+	legend:{
+		cursor: "pointer",
+		itemclick: explodePie
+	},
+	data: [{
+		type: "pie",
+		showInLegend: true,
+		toolTipContent: "{name}: <strong>{y}%</strong>",
+		indexLabel: "{name} - {y}%",
+		dataPoints: [
+			{ y: 26, name: "School Aid", exploded: true },
+			{ y: 20, name: "Medical Aid" },
+			{ y: 5, name: "Debt/Capital" },
+			{ y: 3, name: "Elected Officials" },
+			{ y: 7, name: "University" },
+			{ y: 17, name: "Executive" },
+			{ y: 22, name: "Other Local Assistance"}
+		]
+	}]
+});
+chart.render();
+}
+
+function explodePie (e) {
+	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+		e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+	} else {
+		e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+	}
+	e.chart.render();
+
+}
+</script>
 
   </head>
   <body>
@@ -102,11 +144,11 @@
 
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="mdl-grid demo-content">
+        <div class="mdl-grid graph-content">
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 
           </div>
-          <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col graphDisplay">
+          <div id="graphDisplay" style="height: 500px; margin: 0px auto;" class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col graphDisp">
 
           </div>
 
@@ -115,6 +157,7 @@
     </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   </body>
 </html>
