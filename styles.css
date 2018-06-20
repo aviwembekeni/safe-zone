@@ -18,6 +18,22 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+.green {
+  background-color: #1AB365;
+}
+
+.yellow{
+  background-color: #F5A623;
+}
+
+.mdl-navigation__link{
+  color: white;
+}
+
+.white-text{
+  color: white;
+}
+
 .graph-content{
   height: 100%;
 }
