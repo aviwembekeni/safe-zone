@@ -48,31 +48,14 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Home</span>
+          <span class="mdl-layout-title">Safe Zone</span>
           <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
-            </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">About</li>
-            <li class="mdl-menu__item">Contact</li>
-            <li class="mdl-menu__item">Legal information</li>
-          </ul>
+
         </div>
       </header>
       <div class="demo-drawer mdl-layout__drawer green">
         <header class="demo-drawer-header">
           <img src="images/safe-zone-logo.png" >
-
         </header>
         <nav class="demo-navigation mdl-navigation green">
           <a class="mdl-navigation__link home-link" href="#home"><i class=" material-icons" role="presentation">home</i>Home</a>
@@ -102,213 +85,211 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
 
-    var multiSeriesSplineChartForAll = new CanvasJS.Chart("graphDisplayMult", {
-    	theme:"light2",
-    	animationEnabled: true,
-    	title:{
-    		text: "Crime Stats In Cape Town"
-    	},
-    	axisY :{
-    		includeZero: false,
-    		title: "Number of crime reported",
-    		suffix: ""
-    	},
-    	toolTip: {
-    		shared: "true"
-    	},
-    	legend:{
-    		cursor:"pointer",
-    		itemclick : toggleDataSeries
-    	},
-    	data: [
-    	{
-    		type: "spline",
-    		visible: false,
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Cape Town Cental",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 3770 },
-    			{ label: "Drug-related crime", y: 2796 },
-    			{ label: "Common-assault", y: 571 },
-    			{ label: "Contact: Sexual Offense", y: 6 },
-    			{ label: "Attempted: Sexual Offense", y: 2 },
-    			{ label: "rape", y: 21 },
-    			{ label: "Robbery: residential premises", y: 35 },
-    			{ label: "Robbery: non-residential premises", y: 24 },
-    			{ label: "Murder", y: 11},
-    			{ label: "Theft: Shoplifting", y: 1287 },
-    			{ label: "Car-jacking", y: 17 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 280 },
-    		],
-    	},
-    	{
-    		type: "spline",
-    		showInLegend: true,
-    		visible: false,
-    		yValueFormatString: "##",
-    		name: "Mitchells Plain",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 1080},
-    			{ label: "Drug-related crime", y: 4914 },
-    			{ label: "Common-assault", y: 1992 },
-    			{ label: "Contact: Sexual Offense", y: 5 },
-    			{ label: "Attempted: Sexual Offense", y: 6 },
-    			{ label: "rape", y: 104 },
-    			{ label: "Robbery: residential premises", y: 39 },
-    			{ label: "Robbery:non-residential premises", y: 38 },
-    			{ label: "Murder", y: 103 },
-    			{ label: "Theft: Shoplifting", y: 774},
-    			{ label: "Car-jacking", y: 54 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 183 },
+        var multiSeriesSplineChartForAll = new CanvasJS.Chart("graphDisplayMult", {
+        	theme:"light2",
+        	animationEnabled: true,
+        	title:{
+        		text: "Crime Stats In Cape Town"
+        	},
+        	axisY :{
+        		includeZero: false,
+        		title: "Number of crime reported",
+        		suffix: ""
+        	},
+        	toolTip: {
+        		shared: "true"
+        	},
+        	legend:{
+        		cursor:"pointer",
+        		itemclick : toggleDataSeries
+        	},
+        	data: [
+        	{
+        		type: "spline",
+        		visible: false,
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Cape Town Cental",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 3770 },
+        			{ label: "Drug-related crime", y: 2796 },
+        			{ label: "Common-assault", y: 571 },
+        			{ label: "Contact: Sexual Offense", y: 6 },
+        			{ label: "Attempted: Sexual Offense", y: 2 },
+        			{ label: "rape", y: 21 },
+        			{ label: "Robbery: residential premises", y: 35 },
+        			{ label: "Robbery: non-residential premises", y: 24 },
+        			{ label: "Murder", y: 11},
+        			{ label: "Theft: Shoplifting", y: 1287 },
+        			{ label: "Car-jacking", y: 17 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 280 },
+        		],
+        	},
+        	{
+        		type: "spline",
+        		showInLegend: true,
+        		visible: false,
+        		yValueFormatString: "##",
+        		name: "Mitchells Plain",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 1080},
+        			{ label: "Drug-related crime", y: 4914 },
+        			{ label: "Common-assault", y: 1992 },
+        			{ label: "Contact: Sexual Offense", y: 5 },
+        			{ label: "Attempted: Sexual Offense", y: 6 },
+        			{ label: "rape", y: 104 },
+        			{ label: "Robbery: residential premises", y: 39 },
+        			{ label: "Robbery:non-residential premises", y: 38 },
+        			{ label: "Murder", y: 103 },
+        			{ label: "Theft: Shoplifting", y: 774},
+        			{ label: "Car-jacking", y: 54 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 183 },
 
-    		],
-    	},
-    	{
-    		type: "spline",
-    		visible: false,
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Khayelitsha",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 143},
-    			{ label: "Drug-related crime", y: 1381 },
-    			{ label: "Common-assault", y: 826 },
-    			{ label: "Contact: Sexual Offense", y: 6 },
-    			{ label: "Attempted: Sexual Offense", y: 6 },
-    			{ label: "rape", y: 139 },
-    			{ label: "Robbery: residential premises", y: 116 },
-    			{ label: "Robbery:non-residential premises", y: 115 },
-    			{ label: "Murder", y: 179 },
-    			{ label: "Theft: Shoplifting", y: 254},
-    			{ label: "Car-jacking", y: 145 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 209 },
+        		],
+        	},
+        	{
+        		type: "spline",
+        		visible: false,
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Khayelitsha",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 143},
+        			{ label: "Drug-related crime", y: 1381 },
+        			{ label: "Common-assault", y: 826 },
+        			{ label: "Contact: Sexual Offense", y: 6 },
+        			{ label: "Attempted: Sexual Offense", y: 6 },
+        			{ label: "rape", y: 139 },
+        			{ label: "Robbery: residential premises", y: 116 },
+        			{ label: "Robbery:non-residential premises", y: 115 },
+        			{ label: "Murder", y: 179 },
+        			{ label: "Theft: Shoplifting", y: 254},
+        			{ label: "Car-jacking", y: 145 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 209 },
 
-    		],
-    	},
-    	{
-    		type: "spline",
-    		visible: false,
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Delft",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 301},
-    			{ label: "Drug-related crime", y: 2926 },
-    			{ label: "Common-assault", y: 603 },
-    			{ label: "Contact: Sexual Offense", y: 5 },
-    			{ label: "Attempted: Sexual Offense", y: 13 },
-    			{ label: "rape", y: 158 },
-    			{ label: "Robbery: residential premises", y: 153 },
-    			{ label: "Robbery:non-residential premises", y: 39 },
-    			{ label: "Murder", y: 183 },
-    			{ label: "Theft: Shoplifting", y: 42},
-    			{ label: "Car-jacking", y: 164 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 350 },
+        		],
+        	},
+        	{
+        		type: "spline",
+        		visible: false,
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Delft",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 301},
+        			{ label: "Drug-related crime", y: 2926 },
+        			{ label: "Common-assault", y: 603 },
+        			{ label: "Contact: Sexual Offense", y: 5 },
+        			{ label: "Attempted: Sexual Offense", y: 13 },
+        			{ label: "rape", y: 158 },
+        			{ label: "Robbery: residential premises", y: 153 },
+        			{ label: "Robbery:non-residential premises", y: 39 },
+        			{ label: "Murder", y: 183 },
+        			{ label: "Theft: Shoplifting", y: 42},
+        			{ label: "Car-jacking", y: 164 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 350 },
 
-    		],
-    	},
-    	{
-    		type: "spline",
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Gugulethu",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 170},
-    			{ label: "Drug-related crime", y: 1711 },
-    			{ label: "Common-assault", y: 541 },
-    			{ label: "Contact: Sexual Offense", y: 14 },
-    			{ label: "Attempted: Sexual Offense", y: 12 },
-    			{ label: "rape", y: 173 },
-    			{ label: "Robbery: residential premises", y: 131 },
-    			{ label: "Robbery:non-residential premises", y: 32 },
-    			{ label: "Murder", y: 136 },
-    			{ label: "Theft: Shoplifting", y: 171},
-    			{ label: "Car-jacking", y: 157 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 240 },
-    		],
-    	},
-    	{
-    		type: "spline",
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Bishop Lavis",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 771 },
-    			{ label: "Drug-related crime", y: 2898 },
-    			{ label: "Common-assault", y: 652 },
-    			{ label: "Contact: Sexual Offense", y: 94 },
-    			{ label: "Rape", y: 58},
-    			{ label: "Robbery: residential premises", y: 18 },
-    			{ label: "Robbery:non-residential premises", y: 14 },
-    			{ label: "Murder", y: 97 },
-    			{ label: "Theft: Shoplifting", y: 178 },
-    			{ label: "Car-jacking", y: 25 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 71 },
-    		]
-    	},
-    	{
-    		type: "spline",
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Mannenburg",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 81 },
-    			{ label: "Drug-related crime", y: 2399 },
-    			{ label: "Common-assault", y: 573 },
-    			{ label: "Contact: Sexual Offense", y: 133 },
-    			{ label: "Rape", y: 66},
-    			{ label: "Robbery: residential premises", y: 18 },
-    			{ label: "Robbery:non-residential premises", y: 26 },
-    			{ label: "Murder", y: 55 },
-    			{ label: "Theft: Shoplifting", y: 79 },
-    			{ label: "Car-jacking", y: 24},
-    			{ label: "Driving under the influence of alcohol", y: 292 },
-    		]
-    	},
+        		],
+        	},
+        	{
+        		type: "spline",
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Gugulethu",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 170},
+        			{ label: "Drug-related crime", y: 1711 },
+        			{ label: "Common-assault", y: 541 },
+        			{ label: "Contact: Sexual Offense", y: 14 },
+        			{ label: "Attempted: Sexual Offense", y: 12 },
+        			{ label: "rape", y: 173 },
+        			{ label: "Robbery: residential premises", y: 131 },
+        			{ label: "Robbery:non-residential premises", y: 32 },
+        			{ label: "Murder", y: 136 },
+        			{ label: "Theft: Shoplifting", y: 171},
+        			{ label: "Car-jacking", y: 157 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 240 },
+        		],
+        	},
+        	{
+        		type: "spline",
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Bishop Lavis",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 771 },
+        			{ label: "Drug-related crime", y: 2898 },
+        			{ label: "Common-assault", y: 652 },
+        			{ label: "Contact: Sexual Offense", y: 94 },
+        			{ label: "Rape", y: 58},
+        			{ label: "Robbery: residential premises", y: 18 },
+        			{ label: "Robbery:non-residential premises", y: 14 },
+        			{ label: "Murder", y: 97 },
+        			{ label: "Theft: Shoplifting", y: 178 },
+        			{ label: "Car-jacking", y: 25 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 71 },
+        		]
+        	},
+        	{
+        		type: "spline",
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Mannenburg",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 81 },
+        			{ label: "Drug-related crime", y: 2399 },
+        			{ label: "Common-assault", y: 573 },
+        			{ label: "Contact: Sexual Offense", y: 133 },
+        			{ label: "Rape", y: 66},
+        			{ label: "Robbery: residential premises", y: 18 },
+        			{ label: "Robbery:non-residential premises", y: 26 },
+        			{ label: "Murder", y: 55 },
+        			{ label: "Theft: Shoplifting", y: 79 },
+        			{ label: "Car-jacking", y: 24},
+        			{ label: "Driving under the influence of alcohol", y: 292 },
+        		]
+        	},
 
-    	{
-    		type: "spline",
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: " Nyanga",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 121 },
-    			{ label: "Drug-related crime", y: 2304 },
-    			{ label: "Common-assault", y: 1111 },
-    			{ label: "Contact: Sexual Offense", y: 356 },
-    			{ label: "Rape", y: 256 },
-    			{ label: "Robbery: residential premises", y: 276 },
-    			{ label: "Robbery:non-residential premises", y: 40 },
-    			{ label: "Murder", y: 281 },
-    			{ label: "Theft: Shoplifting", y: 24 },
-    			{ label: "Car-jacking", y: 257 },
-    			{ label: "Driving under the influence of alcohol", y: 292 },
-    		]
-    	},
-    	{
-    		type: "spline",
-    		showInLegend: true,
-    		yValueFormatString: "##",
-    		name: "Kraaifontein",
-    		dataPoints: [
-    			{ label: "Theft: Out of or from motor vehicle", y: 646},
-    			{ label: "Drug-related crime", y: 4502 },
-    			{ label: "Common-assault", y: 985 },
-    			{ label: "Contact: Sexual Offense", y: 7 },
-    			{ label: "Attempted: Sexual Offense", y: 7 },
-    			{ label: "rape", y: 122 },
-    			{ label: "Robbery: residential premises", y: 63 },
-    			{ label: "Robbery:non-residential premises", y: 49 },
-    			{ label: "Murder", y: 142 },
-    			{ label: "Theft: Shoplifting", y: 197},
-    			{ label: "Car-jacking", y: 63 },
-    			{ label: "Driving under the influence of alcohol or drugs", y: 293 },
-    		],
-    	}]
-    });
-
-
+        	{
+        		type: "spline",
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: " Nyanga",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 121 },
+        			{ label: "Drug-related crime", y: 2304 },
+        			{ label: "Common-assault", y: 1111 },
+        			{ label: "Contact: Sexual Offense", y: 356 },
+        			{ label: "Rape", y: 256 },
+        			{ label: "Robbery: residential premises", y: 276 },
+        			{ label: "Robbery:non-residential premises", y: 40 },
+        			{ label: "Murder", y: 281 },
+        			{ label: "Theft: Shoplifting", y: 24 },
+        			{ label: "Car-jacking", y: 257 },
+        			{ label: "Driving under the influence of alcohol", y: 292 },
+        		]
+        	},
+        	{
+        		type: "spline",
+        		showInLegend: true,
+        		yValueFormatString: "##",
+        		name: "Kraaifontein",
+        		dataPoints: [
+        			{ label: "Theft: Out of or from motor vehicle", y: 646},
+        			{ label: "Drug-related crime", y: 4502 },
+        			{ label: "Common-assault", y: 985 },
+        			{ label: "Contact: Sexual Offense", y: 7 },
+        			{ label: "Attempted: Sexual Offense", y: 7 },
+        			{ label: "rape", y: 122 },
+        			{ label: "Robbery: residential premises", y: 63 },
+        			{ label: "Robbery:non-residential premises", y: 49 },
+        			{ label: "Murder", y: 142 },
+        			{ label: "Theft: Shoplifting", y: 197},
+        			{ label: "Car-jacking", y: 63 },
+        			{ label: "Driving under the influence of alcohol or drugs", y: 293 },
+        		],
+        	}]
+        });
 
         function toggleDataSeries(e) {
         	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible ){
@@ -319,35 +300,101 @@
         	multiSeriesSplineChartForAll.render();
         }
 
+        var dataPoints = [];
+
+        var theftDataPoints = [
+    			{label: "Cape Town Central", y: 27.0677771396},
+    			{label: "Stellenbosch", y: 16.1760482481},
+    			{label: "Bellville", y: 10.4394026422},
+    			{label: "Sea Point", y: 8.3572659391},
+    			{label: "Mitchells Plain", y: 7.7541642734},
+    			{label: "Woodstock", y: 6.5766800689},
+    			{label: "Paarl", y: 6.1817920735},
+    			{label: "Parow", y: 6.1458931648},
+    			{label: "Worcester", y: 5.7653647329},
+    			{label: "Bishop Lavis", y: 5.5356117174},
+
+    		]
+
+        var drugsDataPoints = [
+    			{label: "Mitchells Plain", y: 16.3789080728},
+    			{label: "Kraaifontein", y: 15.0056662889},
+    			{label: "Delft", y: 9.7526831545},
+    			{label: "Bishop Lavis", y: 9.6593560429},
+    			{label: "Cape Town Central", y: 9.3193787081},
+    			{label: "Atlantis", y: 8.7927471502},
+    			{label: "Lentegeur", y: 8.1461235918},
+    			{label: "Manenberg", y: 7.9961335911},
+    			{label: "Nyanga	", y: 7.6794880341},
+    			{label: "Worcester", y:7.2695153656}
+    		]
+
+        var robberyDataPoints = [
+    			{label: "Nyanga", y:22.7160493827},
+    		  {label: "Delft",  y:12.5925925926},
+    		  {label: "Gugulethu", y:10.7818930041},
+    		  {label: "Harare", y:9.5473251029},
+    		  {label:  "Khayelitsha", y:9.5473251029},
+    		  {label:  "Philippi East", y:8.6419753086},
+    		  {label:  "Mfuleni", y:8.3950617284},
+    		  {label:  "Stellenbosch", y:6.9135802469},
+    		  {label:  "Milnerton", y:5.6790123457},
+    		  {label:  "Kraaifontein", y:5.1851851852}
+    		]
+
+        var hijackDataPoints = [
+    			{label: "Khayelitsha", y: 18.4210526316},
+    			{label: "Gugulethu", y: 15.7894736842},
+    			{label: "Nyanga", y: 13.1578947368},
+    			{label: "Harare", y: 10.5263157895},
+    			{label: "Langa", y: 7.8947368421},
+    			{label: "Delft", y: 7.8947368421},
+    			{label: "Philippi East", y: 7.8947368421},
+    			{label: "Brackenfell", y: 7.8947368421},
+    			{label: "Klapmuts", y: 5.2631578947},
+    			{label: "Mfuleni", y: 5.2631578947}
+    		]
+
+        var asoDataPoints = [
+    			{label: "Nyanga", y: 19.4444444444},
+    			{label: "Delft", y: 12.037037037},
+    			{label: "Gugulethu", y: 11.1111111111},
+    			{label: "Malmesbury", y: 11.1111111111},
+    			{label: "Manenberg", y: 10.1851851852},
+    			{label: "Harare", y: 9.2592592593},
+    			{label: "Ceres", y: 7.4074074074},
+    			{label: "Grabouw", y: 6.4814814815},
+    			{label: "Conville", y: 6.4814814815},
+    			{label: "Pacaltsdorp", y: 6.4814814815}
+    		]
+
+        var csoDataPoints = [
+    			{label: "Gugulethu", y: 14.4329896907},
+    			{label: "Nyanga", y: 12.3711340206},
+    			{label: "Harare	", y: 12.3711340206},
+    			{label: "Ceres", y: 10.3092783505},
+    			{label: "Wolseley", y: 9.2783505155},
+    			{label: "George", y: 9.2783505155},
+    			{label: "Philippi East	", y: 9.2783505155},
+    			{label: "Milnerton", y: 8.2474226804},
+    			{label: "Lingelethu-West", y: 7.2164948454},
+    			{label: "Grassy Park", y: 7.2164948454}
+    		]
+
         var chart = new CanvasJS.Chart("graphDisplay", {
         	exportEnabled: true,
         	animationEnabled: true,
         	title:{
-        		text: "State Operating Funds"
-        	},
-        	legend:{
-        		cursor: "pointer",
-        		itemclick: explodePie
+        		text: ""
         	},
         	data: [{
         		type: "pie",
-        		showInLegend: true,
-        		toolTipContent: "{name}: <strong>{y}%</strong>",
-        		indexLabel: "{name} - {y}%",
-        		dataPoints: [
-        			{ y: 26, name: "School Aid", exploded: true },
-        			{ y: 20, name: "Medical Aid" },
-        			{ y: 5, name: "Debt/Capital" },
-        			{ y: 3, name: "Elected Officials" },
-        			{ y: 7, name: "University" },
-        			{ y: 17, name: "Executive" },
-        			{ y: 22, name: "Other Local Assistance"}
-        		]
+            startAngle: 240,
+        		yValueFormatString: "##0.00\"%\"",
+        		indexLabel: "{label} {y}",
+        		dataPoints: dataPoints
         	}]
         });
-
-
-
 
         function explodePie (e) {
         	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
@@ -374,37 +421,49 @@
             graphDispStyle.visibility = "hidden";
             graphDispStyle.height = 0;
             graphDispMultStyle.visibility = "visible";
-             multiSeriesSplineChartForAll.render();
+            multiSeriesSplineChartForAll.render();
           }else if (location.hash === "#theft") {
             graphDispMultStyle.visibility = "hidden";
             graphDispMultStyle.height = 0;
             graphDispStyle.visibility = "visible";
-             chart.render();
+            chart.options.data[0].dataPoints = theftDataPoints;
+            chart.options.title.text = "Crime Stats For Theft";
+            chart.render();
           }else if (location.hash === "#drugs") {
             graphDispMultStyle.visibility = "hidden";
             graphDispMultStyle.height = 0;
             graphDispStyle.visibility = "visible";
-             chart.render();
+            chart.options.data[0].dataPoints = drugsDataPoints;
+            chart.options.title.text = "Crime Stats For Drug Related Crime";
+            chart.render();
           }else if (location.hash === "#robbery") {
             graphDispMultStyle.visibility = "hidden";
             graphDispMultStyle.height = 0;
             graphDispStyle.visibility = "visible";
-             chart.render();
+            chart.options.data[0].dataPoints = robberyDataPoints;
+            chart.options.title.text = "Crime Stats For Robbery";
+            chart.render();
           }else if (location.hash === "#hijack") {
             graphDispMultStyle.visibility = "hidden";
             graphDispMultStyle.height = 0;
             graphDispStyle.visibility = "visible";
-             chart.render();
+            chart.options.data[0].dataPoints = hijackDataPoints;
+            chart.options.title.text = "Crime Stats For Car Jacking";
+            chart.render();
           }else if (location.hash === "#aso") {
             graphDispMultStyle.visibility = "hidden";
             graphDispMultStyle.height = 0;
             graphDispStyle.visibility = "visible";
-             chart.render();
+            chart.options.data[0].dataPoints = asoDataPoints;
+            chart.options.title.text = "Crime Stats For Attempted Sexual Offense";
+            chart.render();
           }else if (location.hash === "#cso") {
             graphDispMultStyle.visibility = "hidden";
             graphDispMultStyle.height = 0;
             graphDispStyle.visibility = "visible";
-             chart.render();
+            chart.options.data[0].dataPoints = csoDataPoints;
+            chart.options.title.text = "Crime Stats For Contact Sexual Offense";
+            chart.render();
           }
 
 
