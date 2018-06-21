@@ -103,150 +103,212 @@
     <script>
 
     var multiSeriesSplineChartForAll = new CanvasJS.Chart("graphDisplayMult", {
-        theme:"light2",
-        animationEnabled: true,
-        title:{
-          text: "Game of Thrones Viewers of the First Airing on HBO"
-        },
-        axisY :{
-          includeZero: false,
-          title: "Number of Viewers",
-          suffix: "mn"
-        },
-        toolTip: {
-          shared: "true"
-        },
-        legend:{
-          cursor:"pointer",
-          itemclick : toggleDataSeries
-        },
-        data: [{
-          type: "spline",
-          visible: false,
-          showInLegend: true,
-          yValueFormatString: "##.00mn",
-          name: "Season 1",
-          dataPoints: [
-            { label: "Ep. 1", y: 2.22 },
-            { label: "Ep. 2", y: 2.20 },
-            { label: "Ep. 3", y: 2.44 },
-            { label: "Ep. 4", y: 2.45 },
-            { label: "Ep. 5", y: 2.58 },
-            { label: "Ep. 6", y: 2.44 },
-            { label: "Ep. 7", y: 2.40 },
-            { label: "Ep. 8", y: 2.72 },
-            { label: "Ep. 9", y: 2.66 },
-            { label: "Ep. 10", y: 3.04 }
-          ]
-        },
-        {
-          type: "spline",
-          showInLegend: true,
-          visible: false,
-          yValueFormatString: "##.00mn",
-          name: "Season 2",
-          dataPoints: [
-            { label: "Ep. 1", y: 3.86 },
-            { label: "Ep. 2", y: 3.76 },
-            { label: "Ep. 3", y: 3.77 },
-            { label: "Ep. 4", y: 3.65 },
-            { label: "Ep. 5", y: 3.90 },
-            { label: "Ep. 6", y: 3.88 },
-            { label: "Ep. 7", y: 3.69 },
-            { label: "Ep. 8", y: 3.86 },
-            { label: "Ep. 9", y: 3.38 },
-            { label: "Ep. 10", y: 4.20 }
-          ]
-        },
-        {
-          type: "spline",
-          visible: false,
-          showInLegend: true,
-          yValueFormatString: "##.00mn",
-          name: "Season 3",
-          dataPoints: [
-            { label: "Ep. 1", y: 4.37 },
-            { label: "Ep. 2", y: 4.27 },
-            { label: "Ep. 3", y: 4.72 },
-            { label: "Ep. 4", y: 4.87 },
-            { label: "Ep. 5", y: 5.35 },
-            { label: "Ep. 6", y: 5.50 },
-            { label: "Ep. 7", y: 4.84 },
-            { label: "Ep. 8", y: 4.13 },
-            { label: "Ep. 9", y: 5.22 },
-            { label: "Ep. 10", y: 5.39 }
-          ]
-        },
-        {
-          type: "spline",
-          showInLegend: true,
-          yValueFormatString: "##.00mn",
-          name: "Season 4",
-          dataPoints: [
-            { label: "Ep. 1", y: 6.64 },
-            { label: "Ep. 2", y: 6.31 },
-            { label: "Ep. 3", y: 6.59 },
-            { label: "Ep. 4", y: 6.95 },
-            { label: "Ep. 5", y: 7.16 },
-            { label: "Ep. 6", y: 6.40 },
-            { label: "Ep. 7", y: 7.20 },
-            { label: "Ep. 8", y: 7.17 },
-            { label: "Ep. 9", y: 6.95 },
-            { label: "Ep. 10", y: 7.09 }
-          ]
-        },
-        {
-          type: "spline",
-          showInLegend: true,
-          yValueFormatString: "##.00mn",
-          name: "Season 5",
-          dataPoints: [
-            { label: "Ep. 1", y: 8 },
-            { label: "Ep. 2", y: 6.81 },
-            { label: "Ep. 3", y: 6.71 },
-            { label: "Ep. 4", y: 6.82 },
-            { label: "Ep. 5", y: 6.56 },
-            { label: "Ep. 6", y: 6.24 },
-            { label: "Ep. 7", y: 5.40 },
-            { label: "Ep. 8", y: 7.01 },
-            { label: "Ep. 9", y: 7.14 },
-            { label: "Ep. 10", y: 8.11 }
-          ]
-        },
-        {
-          type: "spline",
-          showInLegend: true,
-          yValueFormatString: "##.00mn",
-          name: "Season 6",
-          dataPoints: [
-            { label: "Ep. 1", y: 7.94 },
-            { label: "Ep. 2", y: 7.29 },
-            { label: "Ep. 3", y: 7.28 },
-            { label: "Ep. 4", y: 7.82 },
-            { label: "Ep. 5", y: 7.89 },
-            { label: "Ep. 6", y: 6.71 },
-            { label: "Ep. 7", y: 7.80 },
-            { label: "Ep. 8", y: 7.60 },
-            { label: "Ep. 9", y: 7.66 },
-            { label: "Ep. 10", y: 8.89 }
-          ]
-        },
-        {
-          type: "spline",
-          showInLegend: true,
-          yValueFormatString: "##.00mn",
-          name: "Season 7",
-          dataPoints: [
-            { label: "Ep. 1", y: 10.11 },
-            { label: "Ep. 2", y: 9.27 },
-            { label: "Ep. 3", y: 9.25 },
-            { label: "Ep. 4", y: 10.17 },
-            { label: "Ep. 5", y: 10.72 },
-            { label: "Ep. 6", y: 10.24 },
-            { label: "Ep. 7", y: 12.07 }
-          ]
-        }]
-        });
+    	theme:"light2",
+    	animationEnabled: true,
+    	title:{
+    		text: "Crime Stats In Cape Town"
+    	},
+    	axisY :{
+    		includeZero: false,
+    		title: "Numner of crime reported",
+    		suffix: "amt"
+    	},
+    	toolTip: {
+    		shared: "true"
+    	},
+    	legend:{
+    		cursor:"pointer",
+    		itemclick : toggleDataSeries
+    	},
+    	data: [
+    	{
+    		type: "spline",
+    		visible: false,
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Cape Town Cental",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 3770 },
+    			{ label: "Drug-related crime", y: 2796 },
+    			{ label: "Common-assault", y: 571 },
+    			{ label: "Contact: Sexual Offense", y: 6 },
+    			{ label: "Attempted: Sexual Offense", y: 2 },
+    			{ label: "rape", y: 21 },
+    			{ label: "Robbery: residential premises", y: 35 },
+    			{ label: "Robbery: non-residential premises", y: 24 },
+    			{ label: "Murder", y: 11},
+    			{ label: "Theft: Shoplifting", y: 1287 },
+    			{ label: "Car-jacking", y: 17 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 280 },
+    		],
+    	},
+    	{
+    		type: "spline",
+    		showInLegend: true,
+    		visible: false,
+    		yValueFormatString: "##",
+    		name: "Mitchells Plain",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 1080},
+    			{ label: "Drug-related crime", y: 4914 },
+    			{ label: "Common-assault", y: 1992 },
+    			{ label: "Contact: Sexual Offense", y: 5 },
+    			{ label: "Attempted: Sexual Offense", y: 6 },
+    			{ label: "rape", y: 104 },
+    			{ label: "Robbery: residential premises", y: 39 },
+    			{ label: "Robbery:non-residential premises", y: 38 },
+    			{ label: "Murder", y: 103 },
+    			{ label: "Theft: Shoplifting", y: 774},
+    			{ label: "Car-jacking", y: 54 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 183 },
+
+    		],
+    	},
+    	{
+    		type: "spline",
+    		visible: false,
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Khayelitsha",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 143},
+    			{ label: "Drug-related crime", y: 1381 },
+    			{ label: "Common-assault", y: 826 },
+    			{ label: "Contact: Sexual Offense", y: 6 },
+    			{ label: "Attempted: Sexual Offense", y: 6 },
+    			{ label: "rape", y: 139 },
+    			{ label: "Robbery: residential premises", y: 116 },
+    			{ label: "Robbery:non-residential premises", y: 115 },
+    			{ label: "Murder", y: 179 },
+    			{ label: "Theft: Shoplifting", y: 254},
+    			{ label: "Car-jacking", y: 145 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 209 },
+
+    		],
+    	},
+    	{
+    		type: "spline",
+    		visible: false,
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Delft",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 301},
+    			{ label: "Drug-related crime", y: 2926 },
+    			{ label: "Common-assault", y: 603 },
+    			{ label: "Contact: Sexual Offense", y: 5 },
+    			{ label: "Attempted: Sexual Offense", y: 13 },
+    			{ label: "rape", y: 158 },
+    			{ label: "Robbery: residential premises", y: 153 },
+    			{ label: "Robbery:non-residential premises", y: 39 },
+    			{ label: "Murder", y: 183 },
+    			{ label: "Theft: Shoplifting", y: 42},
+    			{ label: "Car-jacking", y: 164 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 350 },
+
+    		],
+    	},
+    	{
+    		type: "spline",
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Gugulethu",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 170},
+    			{ label: "Drug-related crime", y: 1711 },
+    			{ label: "Common-assault", y: 541 },
+    			{ label: "Contact: Sexual Offense", y: 14 },
+    			{ label: "Attempted: Sexual Offense", y: 12 },
+    			{ label: "rape", y: 173 },
+    			{ label: "Robbery: residential premises", y: 131 },
+    			{ label: "Robbery:non-residential premises", y: 32 },
+    			{ label: "Murder", y: 136 },
+    			{ label: "Theft: Shoplifting", y: 171},
+    			{ label: "Car-jacking", y: 157 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 240 },
+    		],
+    	},
+    	{
+    		type: "spline",
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Bishop Lavis",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 771 },
+    			{ label: "Drug-related crime", y: 2898 },
+    			{ label: "Common-assault", y: 652 },
+    			{ label: "Contact: Sexual Offense", y: 94 },
+    			{ label: "Rape", y: 58},
+    			{ label: "Robbery: residential premises", y: 18 },
+    			{ label: "Robbery:non-residential premises", y: 14 },
+    			{ label: "Murder", y: 97 },
+    			{ label: "Theft: Shoplifting", y: 178 },
+    			{ label: "Car-jacking", y: 25 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 71 },
+    		]
+    	},
+    	{
+    		type: "spline",
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Mannenburg",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 81 },
+    			{ label: "Drug-related crime", y: 2399 },
+    			{ label: "Common-assault", y: 573 },
+    			{ label: "Contact: Sexual Offense", y: 133 },
+    			{ label: "Rape", y: 66},
+    			{ label: "Robbery: residential premises", y: 18 },
+    			{ label: "Robbery:non-residential premises", y: 26 },
+    			{ label: "Murder", y: 55 },
+    			{ label: "Theft: Shoplifting", y: 79 },
+    			{ label: "Car-jacking", y: 24},
+    			{ label: "Driving under the influence of alcohol", y: 292 },
+    		]
+    	},
+
+    	{
+    		type: "spline",
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: " Nyanga",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 121 },
+    			{ label: "Drug-related crime", y: 2304 },
+    			{ label: "Common-assault", y: 1111 },
+    			{ label: "Contact: Sexual Offense", y: 356 },
+    			{ label: "Rape", y: 256 },
+    			{ label: "Robbery: residential premises", y: 276 },
+    			{ label: "Robbery:non-residential premises", y: 40 },
+    			{ label: "Murder", y: 281 },
+    			{ label: "Theft: Shoplifting", y: 24 },
+    			{ label: "Car-jacking", y: 257 },
+    			{ label: "Driving under the influence of alcohol", y: 292 },
+    		]
+    	},
+    	{
+    		type: "spline",
+    		showInLegend: true,
+    		yValueFormatString: "##",
+    		name: "Kraaifontein",
+    		dataPoints: [
+    			{ label: "Theft: Out of or from motor vehicle", y: 646},
+    			{ label: "Drug-related crime", y: 4502 },
+    			{ label: "Common-assault", y: 985 },
+    			{ label: "Contact: Sexual Offense", y: 7 },
+    			{ label: "Attempted: Sexual Offense", y: 7 },
+    			{ label: "rape", y: 122 },
+    			{ label: "Robbery: residential premises", y: 63 },
+    			{ label: "Robbery:non-residential premises", y: 49 },
+    			{ label: "Murder", y: 142 },
+    			{ label: "Theft: Shoplifting", y: 197},
+    			{ label: "Car-jacking", y: 63 },
+    			{ label: "Driving under the influence of alcohol or drugs", y: 293 },
+    		],
+    	}]
+    });
+
+
 
         function toggleDataSeries(e) {
         	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible ){
