@@ -25,12 +25,12 @@
     <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
     #view-source {
       position: fixed;
@@ -53,11 +53,11 @@
 
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer green">
-        <header class="demo-drawer-header">
+      <div class="demo-drawer mdl-layout__drawer navigations">
+        <header class="demo-drawer-header logo">
           <img src="images/safe-zone-logo.png" >
         </header>
-        <nav class="demo-navigation mdl-navigation green">
+        <nav class="demo-navigation mdl-navigation navigations">
           <a class="mdl-navigation__link home-link" href="#home"><i class=" material-icons" role="presentation">home</i>Home</a>
           <a class="mdl-navigation__link white-text" href="#theft"><i class=" material-icons" role="presentation">add_shopping_cart</i>Theft</a>
           <a class="mdl-navigation__link white-text" href="#drugs"><i class=" material-icons" role="presentation">hourglass_full</i>Drugs</a>
@@ -406,12 +406,18 @@
 
         }
 
+        function removeHash () {
+            history.pushState("", document.title, window.location.pathname
+                                                               + window.location.search);
+        }
+
         var graphDispStyle = document.querySelector("#graphDisplay").style;
         var graphDispMultStyle = document.querySelector("#graphDisplayMult").style;
 
         graphDispStyle.visibility = "hidden";
         graphDispStyle.height = 0;
 
+        window.onload = removeHash();
         window.onload = multiSeriesSplineChartForAll.render();
 
         window.addEventListener("hashchange", function(){
